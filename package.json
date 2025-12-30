@@ -6,13 +6,13 @@
     "bun": ">=1.3.3"
   },
   "scripts": {
-    "build": "bunx dotenvx run -f ./.env -- next build",
-    "db:push": "prisma db push",
-    "db:studio": "prisma studio",
-    "dev": "bunx dotenvx run -f ./.env -- next dev",
+    "build": "bunx dotenvx run -f ./.env -- bun --bun next build",
+    "db:push": "bunx dotenvx run -f ./.env -- prisma db push",
+    "db:studio": "bunx dotenvx run -f ./.env -- prisma studio",
+    "dev": "bunx dotenvx run -f ./.env -- bun --bun next dev",
     "format": "bunx prettier -w src/ README.md",
-    "postinstall": "prisma generate",
-    "start": "bunx dotenvx run -f ./.env -- next start"
+    "postinstall": "bunx dotenvx run -f ./.env -- bun --bun prisma generate",
+    "start": "bunx dotenvx run -f ./.env -- bun --bun next start"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.26.2",
